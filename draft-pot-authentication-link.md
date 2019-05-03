@@ -14,9 +14,9 @@ normative:
 
 --- abstract
 
-This specification defines a set ofships that may be used
-to indicate where a user may authenticate, sign out, register a new account
-or who is currently authenticated.
+This specification defines a set of relationships that may be used
+to indicate where a user may authenticate, log out, register a new
+account or find out who is currently authenticated.
 
 --- middle
 
@@ -36,9 +36,9 @@ For example, this link might refer to a HTML login page.
 
 Example:
 
-```html
+~~~ html
 <a href="/login" rel="authenticate">Login</a>
-```
+~~~
 
 This specification doesn't define the authentication protocol. For example,
 the link could refer to an OAuth2 authorization endpoint.
@@ -54,9 +54,9 @@ returns a JSON response with user information.
 
 Example:
 
-```http
+~~~ http
 Link: <https://api.example.org/users/123-abc>; rel="authenticated-as"
-```
+~~~
 
 # logout
 
@@ -80,20 +80,28 @@ This document defines `authenticate`, `authenticated-as`, `logout` and
 `register-user` link relation types and adds them to the "Link Relations"
 registry:
 
+## authenticate link relation
+
 - Relation name: authenticate
 - Description: Refers to a resource where a client may authenticate for the
   the context URI.
 - Reference: TBD
+
+## authenticated-as link relation
 
 - Relation name: authenticated-as
 - Description: Refers to a resource that describes the authenticated entity
   for the HTTP response.
 - Reference: TBD
 
+## logout link relation
+
 - Relation name: logout 
 - Description: Refers to an endpoint where a client may invalidate the current
   authentication session.
 - Reference: TBD
+
+## register-user link relation
 
 - Relation name: register-user
 - Description: Refers to a resource where a client may create a new user

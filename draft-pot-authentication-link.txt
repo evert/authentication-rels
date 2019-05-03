@@ -13,9 +13,9 @@ Expires: November 3, 2019
 
 Abstract
 
-   This specification defines a set ofships that may be used to indicate
-   where a user may authenticate, sign out, register a new account or
-   who is currently authenticated.
+   This specification defines a set of relationships that may be used to
+   indicate where a user may authenticate, log out, register a new
+   account or find out who is currently authenticated.
 
 Status of This Memo
 
@@ -75,7 +75,7 @@ Internet-Draft Link relationship types for authentication       May 2019
 
    Example:
 
-   "html <a href="/login" rel="authenticate">Login</a> "
+   <a href="/login" rel="authenticate">Login</a>
 
    This specification doesn't define the authentication protocol.  For
    example, the link could refer to an OAuth2 authorization endpoint.
@@ -91,8 +91,7 @@ Internet-Draft Link relationship types for authentication       May 2019
 
    Example:
 
-   "http Link: <https://api.example.org/users/123-abc>;
-   rel="authenticated-as" "
+   Link: <https://api.example.org/users/123-abc>; rel="authenticated-as"
 
 4.  logout
 
@@ -102,9 +101,10 @@ Internet-Draft Link relationship types for authentication       May 2019
    In a browser this might clear cookies, or in the case of OAuth2 it
    could revoke any active authentication tokens.
 
+5.  register-user
 
-
-
+   The "register-user" Link Relation refers to a resource where a user
+   might sign up for a service for the context URI.
 
 
 
@@ -113,11 +113,6 @@ Pot                     Expires November 3, 2019                [Page 2]
 
 Internet-Draft Link relationship types for authentication       May 2019
 
-
-5.  register-user
-
-   The "register-user" Link Relation refers to a resource where a user
-   might sign up for a service for the context URI.
 
    The linked resource might contain a HTML registration form, or
    otherwise instructions that allow a client to find out how to sign up
@@ -129,12 +124,16 @@ Internet-Draft Link relationship types for authentication       May 2019
    and "register-user" link relation types and adds them to the "Link
    Relations" registry:
 
+6.1.  authenticate link relation
+
    o  Relation name: authenticate
 
    o  Description: Refers to a resource where a client may authenticate
       for the the context URI.
 
    o  Reference: TBD
+
+6.2.  authenticated-as link relation
 
    o  Relation name: authenticated-as
 
@@ -143,12 +142,16 @@ Internet-Draft Link relationship types for authentication       May 2019
 
    o  Reference: TBD
 
+6.3.  logout link relation
+
    o  Relation name: logout
 
    o  Description: Refers to an endpoint where a client may invalidate
       the current authentication session.
 
    o  Reference: TBD
+
+6.4.  register-user link relation
 
    o  Relation name: register-user
 
@@ -157,11 +160,8 @@ Internet-Draft Link relationship types for authentication       May 2019
 
    o  Reference: TBD
 
-7.  Normative References
 
-   [RFC8288]  Nottingham, M., "Web Linking", RFC 8288,
-              DOI 10.17487/RFC8288, October 2017,
-              <https://www.rfc-editor.org/info/rfc8288>.
+
 
 
 
@@ -169,6 +169,12 @@ Pot                     Expires November 3, 2019                [Page 3]
 
 Internet-Draft Link relationship types for authentication       May 2019
 
+
+7.  Normative References
+
+   [RFC8288]  Nottingham, M., "Web Linking", RFC 8288,
+              DOI 10.17487/RFC8288, October 2017,
+              <https://www.rfc-editor.org/info/rfc8288>.
 
 Appendix A.  Changelog
 
@@ -182,12 +188,6 @@ Author's Address
 
    Email: me@evertpot.com
    URI:   https://evertpot.com/
-
-
-
-
-
-
 
 
 
