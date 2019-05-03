@@ -27,7 +27,7 @@ This specification defines a set of new relationship types to aid clients
 in discovering endpoints for authentication and registration:
 `authenticate`, `authenticated-as`, `logout` and `register-user`.
 
-# `authenticate`
+# authenticate
 
 The `authenticate` can be used to link to a resource that hosts
 a page where a user can authenticate itself for the current resource.
@@ -43,7 +43,7 @@ Example:
 This specification doesn't define the authentication protocol. For example,
 the link could refer to an OAuth2 authorization endpoint.
 
-# `authenticated-as`
+# authenticated-as
 
 The `authenticated-as` link refers to a resource that describes the effective
 authenticated user for a HTTP response.
@@ -58,7 +58,7 @@ Example:
 Link: <https://api.example.org/users/123-abc>; rel="authenticated-as"
 ```
 
-# `logout`
+# logout
 
 The `logout` refers to a resource where an authenticated user
 might end their session.
@@ -66,7 +66,7 @@ might end their session.
 In a browser this might clear cookies, or in the case of OAuth2 it could
 revoke any active authentication tokens.
 
-# `register-user`
+# register-user
 
 The `register-user` Link Relation refers to a resource where a user might
 sign up for a service for the context URI.
@@ -94,12 +94,12 @@ registry:
 - Description: Refers to an endpoint where a client may invalidate the current
   authentication session.
 - Reference: TBD
--
+
 - Relation name: register-user
 - Description: Refers to a resource where a client may create a new user
   account for the context URI.
 - Reference: TBD
--
+
 --- back
 
 # Changelog
