@@ -1,7 +1,7 @@
 ---
 date: 2019-05-02
 title: "Link relationship types for authentication"
-docname: draft-authentication-link-00
+docname: draft-pot-authentication-link-00
 category: std
 author:
  -

@@ -9,7 +9,7 @@ Expires: November 3, 2019
 
 
                Link relationship types for authentication
-                      draft-authentication-link-00
+                    draft-pot-authentication-link-00
 
 Abstract
 
