@@ -27,6 +27,30 @@ This specification defines a set of new relationship types to aid clients
 in discovering endpoints for authentication and registration:
 `authenticate`, `authenticated-as`, `logout` and `register-user`.
 
+## Usage examples
+
+### Browsers
+
+Many websites already provide these features. If these links are annotated
+with a standard relationship type, it might allow browser extensions to
+automatically discover these and present them in new ways. It could for
+example show a browser-level logout button.
+
+Link relationships such as these could appear on any page where Sign in,
+Register, Log in or Log out features exist.
+
+### Web services
+
+Many webservices provide a resource to discover more information about the
+authenticated entity. Creating standard link relationships might allow a
+generic client to discover information about the currently logged in user.
+
+Similarly, an `authenticate` link could allow a generic client to find
+an OAuth2 Authorization endpoint.
+
+This link relationship could appear on any API endpoint where this might be
+relevant, or it might just show up on central endpoint discovery document.
+
 # authenticate
 
 The `authenticate` can be used to link to a resource that hosts
@@ -39,9 +63,6 @@ Example:
 ~~~ html
 <a href="/login" rel="authenticate">Login</a>
 ~~~
-
-This specification doesn't define the authentication protocol. For example,
-the link could refer to an OAuth2 authorization endpoint.
 
 # authenticated-as
 
