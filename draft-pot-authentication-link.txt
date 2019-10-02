@@ -3,13 +3,13 @@
 
 
 Network Working Group                                             E. Pot
-Internet-Draft                                              May 02, 2019
+Internet-Draft                                          October 02, 2019
 Intended status: Standards Track
-Expires: November 3, 2019
+Expires: April 4, 2020
 
 
                Link relationship types for authentication
-                    draft-pot-authentication-link-00
+                    draft-pot-authentication-link-01
 
 Abstract
 
@@ -32,7 +32,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on November 3, 2019.
+   This Internet-Draft will expire on April 4, 2020.
 
 Copyright Notice
 
@@ -53,9 +53,9 @@ Copyright Notice
 
 
 
-Pot                     Expires November 3, 2019                [Page 1]
+Pot                       Expires April 4, 2020                 [Page 1]
 
-Internet-Draft Link relationship types for authentication       May 2019
+Internet-Draft Link relationship types for authentication   October 2019
 
 
 1.  Introduction
@@ -65,6 +65,32 @@ Internet-Draft Link relationship types for authentication       May 2019
    aid clients in discovering endpoints for authentication and
    registration: "authenticate", "authenticated-as", "logout" and
    "register-user".
+
+1.1.  Usage examples
+
+1.1.1.  Browsers
+
+   Many websites already provide these features.  If these links are
+   annotated with a standard relationship type, it might allow browser
+   extensions to automatically discover these and present them in new
+   ways.  It could for example show a browser-level logout button.
+
+   Link relationships such as these could appear on any page where Sign
+   in, Register, Log in or Log out features exist.
+
+1.1.2.  Web services
+
+   Many webservices provide a resource to discover more information
+   about the authenticated entity.  Creating standard link relationships
+   might allow a generic client to discover information about the
+   currently logged in user.
+
+   Similarly, an "authenticate" link could allow a generic client to
+   find an OAuth2 Authorization endpoint.
+
+   This link relationship could appear on any API endpoint where this
+   might be relevant, or it might just show up on central endpoint
+   discovery document.
 
 2.  authenticate
 
@@ -77,8 +103,16 @@ Internet-Draft Link relationship types for authentication       May 2019
 
    <a href="/login" rel="authenticate">Login</a>
 
-   This specification doesn't define the authentication protocol.  For
-   example, the link could refer to an OAuth2 authorization endpoint.
+
+
+
+
+
+
+Pot                       Expires April 4, 2020                 [Page 2]
+
+Internet-Draft Link relationship types for authentication   October 2019
+
 
 3.  authenticated-as
 
@@ -106,14 +140,6 @@ Internet-Draft Link relationship types for authentication       May 2019
    The "register-user" Link Relation refers to a resource where a user
    might sign up for a service for the context URI.
 
-
-
-
-Pot                     Expires November 3, 2019                [Page 2]
-
-Internet-Draft Link relationship types for authentication       May 2019
-
-
    The linked resource might contain a HTML registration form, or
    otherwise instructions that allow a client to find out how to sign up
    for the service.
@@ -132,6 +158,17 @@ Internet-Draft Link relationship types for authentication       May 2019
       for the the context URI.
 
    o  Reference: TBD
+
+
+
+
+
+
+
+Pot                       Expires April 4, 2020                 [Page 3]
+
+Internet-Draft Link relationship types for authentication   October 2019
+
 
 6.2.  authenticated-as link relation
 
@@ -160,16 +197,6 @@ Internet-Draft Link relationship types for authentication       May 2019
 
    o  Reference: TBD
 
-
-
-
-
-
-Pot                     Expires November 3, 2019                [Page 3]
-
-Internet-Draft Link relationship types for authentication       May 2019
-
-
 7.  Normative References
 
    [RFC8288]  Nottingham, M., "Web Linking", RFC 8288,
@@ -180,7 +207,7 @@ Appendix A.  Changelog
 
 A.1.  Changes since -00
 
-   *
+   o  More examples and clarifications
 
 Author's Address
 
@@ -194,31 +221,4 @@ Author's Address
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Pot                     Expires November 3, 2019                [Page 4]
+Pot                       Expires April 4, 2020                 [Page 4]

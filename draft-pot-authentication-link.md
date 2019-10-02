@@ -1,7 +1,7 @@
 ---
-date: 2019-05-02
+date: 2019-10-02
 title: "Link relationship types for authentication"
-docname: draft-pot-authentication-link-00
+docname: draft-pot-authentication-link-01
 category: std
 author:
  -
@@ -135,4 +135,4 @@ registry:
 
 ## Changes since -00
 
-*
+* More examples and clarifications
